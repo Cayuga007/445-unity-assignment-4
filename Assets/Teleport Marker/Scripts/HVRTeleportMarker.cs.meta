@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Teleport Marker/Scripts/HVRTeleportMarker.cs.meta
+guid: df8dafe9ffc4293478f87948f6dcba4f
+========
+guid: e111bac9b2cf548a7bd031bd89f435d6
+>>>>>>>> dinoanim:Assets/PBRVelociraptor/VelociraptorControllerVR.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Samples/XR Interaction Toolkit/2.6.3/Starter Assets/Animations/Climb Teleport Arrow.controller.meta
+guid: db6239f7ccb29ca4aac63126c6a35e7d
+========
+guid: 77eb2e1bfba9a4703a7c5f711d999c4a
+>>>>>>>> dinoanim:Assets/PBRVelociraptor/VelociraptorController.controller.meta
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
