@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-
 using UnityEngine;
+using UnityEngine.XR;
 
 public class VelociraptorController : MonoBehaviour
 {
@@ -17,23 +17,32 @@ public class VelociraptorController : MonoBehaviour
         // Reset all triggers before setting a new one
         ResetAllTriggers();
 
-        if (Input.GetKeyDown(KeyCode.I))
+        // A Button (Drink)
+        if (OVRInput.GetDown(OVRInput.Button.One))
         {
-            animator.SetTrigger("IdleTrigger");
+            animator.SetTrigger("DrinkTrigger");
         }
-        if (Input.GetKeyDown(KeyCode.R))
+
+        // B Button (Roar)
+        if (OVRInput.GetDown(OVRInput.Button.Two))
         {
             animator.SetTrigger("RoarTrigger");
         }
-        if (Input.GetKey(KeyCode.LeftShift))
+
+        // Thumbstick Press (Run)
+        if (OVRInput.Get(OVRInput.Button.PrimaryThumbstick))
         {
             animator.SetTrigger("RunTrigger");
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+
+        // Hand Trigger / Grip Button (Attack)
+        if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) > 0.5f)
         {
             animator.SetTrigger("AttackTrigger");
         }
-        if (Input.GetKeyDown(KeyCode.X))
+
+        // Index Trigger (Death)
+        if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) > 0.5f)
         {
             animator.SetTrigger("DeathTrigger");
         }
@@ -41,7 +50,7 @@ public class VelociraptorController : MonoBehaviour
 
     void ResetAllTriggers()
     {
-        animator.ResetTrigger("IdleTrigger");
+        animator.ResetTrigger("DrinkTrigger");
         animator.ResetTrigger("RoarTrigger");
         animator.ResetTrigger("RunTrigger");
         animator.ResetTrigger("AttackTrigger");
